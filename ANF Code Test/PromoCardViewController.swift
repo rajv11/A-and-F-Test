@@ -31,5 +31,9 @@ class PromoCardViewController: UIViewController {
         backgroundImage.contentMode = .scaleAspectFit
         let constraint = isPotrait ? backgroundImage.widthAnchor.constraint(equalTo: backgroundImage.heightAnchor, multiplier: 1/aspectRatio) : backgroundImage.heightAnchor.constraint(equalTo: backgroundImage.widthAnchor, multiplier: 1/aspectRatio)
         NSLayoutConstraint.activate([constraint])
+        
+        topDescription.text = data?["topDescription"] as? String
+        promoTitle.text = data?["title"] as? String
+        promoMessage.text = data?["promoMessage"] as? String
     }
 }
