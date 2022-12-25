@@ -35,5 +35,7 @@ class PromoCardViewController: UIViewController {
         topDescription.text = data?["topDescription"] as? String
         promoTitle.text = data?["title"] as? String
         promoMessage.text = data?["promoMessage"] as? String
+        let bottomDesc = data?["bottomDescription"] as? String
+        bottomDescription.attributedText = bottomDesc?.htmlToAttributedString
     }
 }
