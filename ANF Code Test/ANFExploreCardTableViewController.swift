@@ -35,4 +35,13 @@ class ANFExploreCardTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            //Passing selected breed object to PromoCardViewController
+            let detailVC = segue.destination as! PromoCardViewController
+            detailVC.data = exploreData?[self.tableView.indexPathForSelectedRow!.row]
+            
+        }
+    }
 }
