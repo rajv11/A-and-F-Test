@@ -22,5 +22,14 @@ class PromoCardViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        guard let imageName = data?["backgroundImage"] as? String, let image = UIImage(named: imageName) else { return }
+        var aspectRatio: CGFloat = 0.0
+        let isPotrait = image.size.width < image.size.height
+        aspectRatio = isPotrait ? image.size.height/image.size.width: image.size.width/image.size.height
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.image = image
+        backgroundImage.contentMode = .scaleAspectFit
+        let constraint = isPotrait ? backgroundImage.widthAnchor.constraint(equalTo: backgroundImage.heightAnchor, multiplier: 1/aspectRatio) : backgroundImage.heightAnchor.constraint(equalTo: backgroundImage.widthAnchor, multiplier: 1/aspectRatio)
+        NSLayoutConstraint.activate([constraint])
     }
 }
