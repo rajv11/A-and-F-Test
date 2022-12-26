@@ -15,8 +15,8 @@ class ContentButtonTableViewCell: UITableViewCell {
         // Initialization code
         contentButton.layer.cornerRadius = 0.0
         contentButton.layer.borderWidth = 3.0
-        contentButton.layer.borderColor = UIColor.brown.cgColor
-        contentButton.setTitleColor(UIColor.brown, for: .normal)
+        contentButton.layer.borderColor = UIColor.gray.cgColor
+        contentButton.setTitleColor(.gray, for: .normal)
     }
     
     func configureCell(contentData: [AnyHashable: Any]) {
