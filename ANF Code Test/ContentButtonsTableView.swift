@@ -11,6 +11,7 @@ class ContentButtonsTableView: UITableView {
 
     var dataSourceArray = [[AnyHashable: Any]]() {
         didSet {
+            self.layoutSubviews()
             self.reloadData()
         }
     }
