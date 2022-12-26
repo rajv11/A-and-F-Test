@@ -9,6 +9,7 @@ import UIKit
 
 class ContentButtonTableViewCell: UITableViewCell {
     @IBOutlet weak var contentButton: UIButton!
+    var urlString = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,5 +22,14 @@ class ContentButtonTableViewCell: UITableViewCell {
     
     func configureCell(contentData: [AnyHashable: Any]) {
         contentButton.setTitle(contentData["title"] as? String, for: .normal)
+        urlString = contentData["target"] as? String ?? ""
+        
+    }
+    
+    @IBAction func contentButtonClicked(_ sender: Any) {
+        guard let url = URL(string: urlString) else { return }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
     }
 }
