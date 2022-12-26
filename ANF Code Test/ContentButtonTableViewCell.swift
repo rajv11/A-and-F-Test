@@ -8,7 +8,6 @@
 import UIKit
 
 class ContentButtonTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var contentButton: UIButton!
     
     override func awakeFromNib() {

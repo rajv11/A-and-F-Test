@@ -35,5 +35,14 @@ class PromoCardViewController: UIViewController {
         promoMessage.text = data?["promoMessage"] as? String
         let bottomDesc = data?["bottomDescription"] as? String
         bottomDescription.attributedText = bottomDesc?.htmlToAttributedString
+        
+        guard let contentData = data?["content"] else { return }
+        contentButtonsTableView.dataSourceArray = contentData as! [[AnyHashable: Any]]
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        super.updateViewConstraints()
+        self.contentButtonsTableViewHeightConstraint.constant = self.contentButtonsTableView.contentSize.height
     }
 }
