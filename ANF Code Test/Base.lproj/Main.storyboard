@@ -101,25 +101,34 @@
                                     </label>
                                     <textView clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet," textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fzR-oc-Fzf">
                                         <rect key="frame" x="40" y="111" width="334" height="36.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ContentButtonsTableView" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lT2-HY-lHx" customClass="ContentButtonsTableView" customModule="ANF_Code_Test" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="157.5" width="394" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="LF9-9V-UDI"/>
+                                        </constraints>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99993306400000004" green="1" blue="0.96862262489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="5LU-x0-6TQ" firstAttribute="centerX" secondItem="7Qd-Wf-adn" secondAttribute="centerX" id="1Gs-6f-bZW"/>
+                                    <constraint firstItem="lT2-HY-lHx" firstAttribute="top" secondItem="fzR-oc-Fzf" secondAttribute="bottom" constant="10" id="1NJ-2d-ESV"/>
                                     <constraint firstItem="EVw-wH-lUf" firstAttribute="leading" secondItem="7Qd-Wf-adn" secondAttribute="leading" id="5Hv-2Z-G2j"/>
                                     <constraint firstItem="2al-ts-kaV" firstAttribute="top" secondItem="DGw-ax-yBU" secondAttribute="bottom" constant="10" id="92J-Dg-70m"/>
                                     <constraint firstItem="fzR-oc-Fzf" firstAttribute="top" secondItem="5LU-x0-6TQ" secondAttribute="bottom" constant="20" id="Di2-QQ-PRQ"/>
                                     <constraint firstItem="5LU-x0-6TQ" firstAttribute="top" secondItem="2al-ts-kaV" secondAttribute="bottom" constant="10" id="Gy3-3t-Hyv"/>
                                     <constraint firstItem="DGw-ax-yBU" firstAttribute="top" secondItem="EVw-wH-lUf" secondAttribute="bottom" constant="20" id="YjZ-bb-bKc"/>
+                                    <constraint firstItem="lT2-HY-lHx" firstAttribute="leading" secondItem="7Qd-Wf-adn" secondAttribute="leading" constant="10" id="exS-Md-el5"/>
                                     <constraint firstItem="EVw-wH-lUf" firstAttribute="top" secondItem="7Qd-Wf-adn" secondAttribute="top" id="h0h-ks-Xd8"/>
                                     <constraint firstAttribute="trailing" secondItem="fzR-oc-Fzf" secondAttribute="trailing" constant="40" id="h3q-dT-lLv"/>
                                     <constraint firstItem="2al-ts-kaV" firstAttribute="centerX" secondItem="7Qd-Wf-adn" secondAttribute="centerX" id="jgE-1w-gyl"/>
                                     <constraint firstItem="fzR-oc-Fzf" firstAttribute="leading" secondItem="7Qd-Wf-adn" secondAttribute="leading" constant="40" id="lWV-Zp-wjZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="lT2-HY-lHx" secondAttribute="trailing" constant="10" id="qff-SW-1Cq"/>
                                     <constraint firstAttribute="trailing" secondItem="EVw-wH-lUf" secondAttribute="trailing" id="vIG-bb-yof"/>
                                     <constraint firstItem="DGw-ax-yBU" firstAttribute="centerX" secondItem="7Qd-Wf-adn" secondAttribute="centerX" id="vpJ-fO-IQp"/>
                                 </constraints>
@@ -138,6 +147,8 @@
                     <connections>
                         <outlet property="backgroundImage" destination="EVw-wH-lUf" id="pLS-xm-krh"/>
                         <outlet property="bottomDescription" destination="fzR-oc-Fzf" id="4Co-O7-jzM"/>
+                        <outlet property="contentButtonsTableView" destination="lT2-HY-lHx" id="mRF-yf-fQa"/>
+                        <outlet property="contentButtonsTableViewHeightConstraint" destination="LF9-9V-UDI" id="ya1-Ib-uRg"/>
                         <outlet property="promoMessage" destination="5LU-x0-6TQ" id="ljn-oA-bvL"/>
                         <outlet property="promoTitle" destination="2al-ts-kaV" id="Ns1-Eb-xio"/>
                         <outlet property="topDescription" destination="DGw-ax-yBU" id="eDr-El-bvM"/>
@@ -154,6 +165,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

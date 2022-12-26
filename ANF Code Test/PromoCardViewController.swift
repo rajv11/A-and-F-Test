@@ -8,20 +8,18 @@
 import UIKit
 
 class PromoCardViewController: UIViewController {
-
     @IBOutlet weak var topDescription: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var promoTitle: UILabel!
     @IBOutlet weak var promoMessage: UILabel!
     @IBOutlet weak var bottomDescription: UITextView!
+    @IBOutlet weak var contentButtonsTableView: ContentButtonsTableView!
+    @IBOutlet weak var contentButtonsTableViewHeightConstraint: NSLayoutConstraint!
     
     var data: [AnyHashable: Any]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         guard let imageName = data?["backgroundImage"] as? String, let image = UIImage(named: imageName) else { return }
         var aspectRatio: CGFloat = 0.0
         let isPotrait = image.size.width < image.size.height
