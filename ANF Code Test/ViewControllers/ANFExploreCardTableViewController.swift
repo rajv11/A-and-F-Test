@@ -6,15 +6,10 @@
 import UIKit
 
 class ANFExploreCardTableViewController: UITableViewController {
-    
     private var promoCards: [PromoCard]? {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        if let filePath = Bundle.main.path(forResource: "exploreData", ofType: "json"),
-           let fileContent = try? Data(contentsOf: URL(fileURLWithPath: filePath)), let returnData = try? decoder.decode([PromoCard].self, from: fileContent) {
-            return returnData
-        }
-        return nil
+        let promoCardViewModel = PromoCardViewModel()
+        promoCardViewModel.getPromoCardsFromStub()
+        return promoCardViewModel.promoCards
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
