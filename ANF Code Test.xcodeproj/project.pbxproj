@@ -71,6 +71,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		354A6226295AC63F00CD5E6C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3E727ED226727088006C11AC /* AppDelegate.swift */,
+				3E727ED426727088006C11AC /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		354A6227295AC65400CD5E6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E727EDB2672708B006C11AC /* Assets.xcassets */,
+				3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		354A6228295AC68E00CD5E6C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		354A6229295AC6D600CD5E6C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		354A622A295AC6EA00CD5E6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				354A622C295AC71000CD5E6C /* StoryBoards */,
+				354A622D295AC72200CD5E6C /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		354A622B295AC6F000CD5E6C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
+				35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		354A622C295AC71000CD5E6C /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				3E727ED826727088006C11AC /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		354A622D295AC72200CD5E6C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				351CE8E429590080003F3246 /* ContentButtonTableViewCell.swift */,
+				351CE8E529590080003F3246 /* ContentButtonTableViewCell.xib */,
+				351CE8E82959048B003F3246 /* ContentButtonsTableView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		354A622E295AC73500CD5E6C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3E4AB9392676D86100C79456 /* exploreData.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		357C36282958DF3800C9726D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,18 +177,14 @@
 		3E727ED126727088006C11AC /* ANF Code Test */ = {
 			isa = PBXGroup;
 			children = (
-				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
-				3E727ED226727088006C11AC /* AppDelegate.swift */,
-				3E727ED426727088006C11AC /* SceneDelegate.swift */,
-				3E727ED826727088006C11AC /* Main.storyboard */,
-				3E727EDB2672708B006C11AC /* Assets.xcassets */,
-				3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */,
+				354A622E295AC73500CD5E6C /* Data */,
+				354A622B295AC6F000CD5E6C /* ViewControllers */,
+				354A622A295AC6EA00CD5E6C /* Views */,
+				354A6229295AC6D600CD5E6C /* ViewModels */,
+				354A6228295AC68E00CD5E6C /* Services */,
+				354A6227295AC65400CD5E6C /* Resources */,
+				354A6226295AC63F00CD5E6C /* Core */,
 				3E727EE02672708B006C11AC /* Info.plist */,
-				3E4AB9392676D86100C79456 /* exploreData.json */,
-				35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */,
-				351CE8E429590080003F3246 /* ContentButtonTableViewCell.swift */,
-				351CE8E529590080003F3246 /* ContentButtonTableViewCell.xib */,
-				351CE8E82959048B003F3246 /* ContentButtonsTableView.swift */,
 			);
 			path = "ANF Code Test";
 			sourceTree = "<group>";
