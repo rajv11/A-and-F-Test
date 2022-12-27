@@ -10,6 +10,7 @@
 		351CE8E629590080003F3246 /* ContentButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CE8E429590080003F3246 /* ContentButtonTableViewCell.swift */; };
 		351CE8E729590080003F3246 /* ContentButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 351CE8E529590080003F3246 /* ContentButtonTableViewCell.xib */; };
 		351CE8E92959048B003F3246 /* ContentButtonsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CE8E82959048B003F3246 /* ContentButtonsTableView.swift */; };
+		354A6231295AC7FB00CD5E6C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A6230295AC7FB00CD5E6C /* String+Extension.swift */; };
 		357C362A2958DF3800C9726D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C36292958DF3800C9726D /* WebKit.framework */; };
 		35956BC82955162A00CEFEE9 /* PromoCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */; };
 		3E4AB93A2676D86100C79456 /* exploreData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AB9392676D86100C79456 /* exploreData.json */; };
@@ -36,6 +37,7 @@
 		351CE8E429590080003F3246 /* ContentButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButtonTableViewCell.swift; sourceTree = "<group>"; };
 		351CE8E529590080003F3246 /* ContentButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentButtonTableViewCell.xib; sourceTree = "<group>"; };
 		351CE8E82959048B003F3246 /* ContentButtonsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButtonsTableView.swift; sourceTree = "<group>"; };
+		354A6230295AC7FB00CD5E6C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		357C36292958DF3800C9726D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewController.swift; sourceTree = "<group>"; };
 		3E4AB9392676D86100C79456 /* exploreData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exploreData.json; sourceTree = "<group>"; };
@@ -147,6 +149,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		354A622F295AC7DA00CD5E6C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				354A6230295AC7FB00CD5E6C /* String+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		357C36282958DF3800C9726D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +187,7 @@
 		3E727ED126727088006C11AC /* ANF Code Test */ = {
 			isa = PBXGroup;
 			children = (
+				354A622F295AC7DA00CD5E6C /* Utilities */,
 				354A622E295AC73500CD5E6C /* Data */,
 				354A622B295AC6F000CD5E6C /* ViewControllers */,
 				354A622A295AC6EA00CD5E6C /* Views */,
@@ -301,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
+				354A6231295AC7FB00CD5E6C /* String+Extension.swift in Sources */,
 				351CE8E92959048B003F3246 /* ContentButtonsTableView.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
 				35956BC82955162A00CEFEE9 /* PromoCardViewController.swift in Sources */,
