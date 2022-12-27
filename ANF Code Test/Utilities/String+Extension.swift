@@ -6,7 +6,7 @@
 //
 
 import Foundation
-// MARK: - extenstion
+// MARK: - String extenstion
 extension String {
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return nil }
