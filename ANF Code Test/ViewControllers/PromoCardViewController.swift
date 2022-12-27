@@ -29,8 +29,7 @@ class PromoCardViewController: UIViewController {
         topDescription.text = promoCard.topDescription
         promoTitle.text = promoCard.title
         promoMessage.text = promoCard.promoMessage
-        guard let bottomDesc = promoCard.bottomDescription else { return }
-        bottomDescription.attributedText = bottomDesc.htmlToAttributedString
+        bottomDescription.attributedText = promoCard.bottomDescription?.htmlToAttributedString
         guard let contentData = promoCard.content else { return }
         contentButtonsTableView.dataSourceArray = contentData
     }
