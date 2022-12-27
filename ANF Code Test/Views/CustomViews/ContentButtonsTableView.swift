@@ -8,8 +8,7 @@
 import UIKit
 
 class ContentButtonsTableView: UITableView {
-
-    var dataSourceArray = [[AnyHashable: Any]]() {
+    var dataSourceArray = [Content]() {
         didSet {
             self.layoutSubviews()
             self.reloadData()

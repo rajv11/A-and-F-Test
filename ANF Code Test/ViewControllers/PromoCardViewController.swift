@@ -16,7 +16,7 @@ class PromoCardViewController: UIViewController {
     @IBOutlet weak var contentButtonsTableView: ContentButtonsTableView!
     @IBOutlet weak var contentButtonsTableViewHeightConstraint: NSLayoutConstraint!
     
-    var data: [AnyHashable: Any]?
+    var data: PromoCard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,18 @@ class PromoCardViewController: UIViewController {
     }
     
     func loadViewData() {
-        topDescription.text = data?["topDescription"] as? String
-        promoTitle.text = data?["title"] as? String
-        promoMessage.text = data?["promoMessage"] as? String
-        let bottomDesc = data?["bottomDescription"] as? String
-        bottomDescription.attributedText = bottomDesc?.htmlToAttributedString
-        guard let contentData = data?["content"] else { return }
-        contentButtonsTableView.dataSourceArray = contentData as! [[AnyHashable: Any]]
+        guard let promoCard = data else { return }
+        topDescription.text = promoCard.topDescription
+        promoTitle.text = promoCard.title
+        promoMessage.text = promoCard.promoMessage
+        guard let bottomDesc = promoCard.bottomDescription else { return }
+        bottomDescription.attributedText = bottomDesc.htmlToAttributedString
+        guard let contentData = promoCard.content else { return }
+        contentButtonsTableView.dataSourceArray = contentData
     }
     
     func setUI() {
-        guard let imageName = data?["backgroundImage"] as? String, let image = UIImage(named: imageName) else { return }
+        guard let promoCard = data, let imageName = promoCard.backgroundImage, let image = UIImage(named: imageName) else { return }
         var aspectRatio: CGFloat = 0.0
         let isPotrait = image.size.width < image.size.height
         aspectRatio = isPotrait ? image.size.height/image.size.width: image.size.width/image.size.height
@@ -50,6 +51,7 @@ class PromoCardViewController: UIViewController {
         promoMessage.textColor = .gray
         bottomDescription.linkTextAttributes = [.foregroundColor: UIColor.gray]
     }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         super.updateViewConstraints()

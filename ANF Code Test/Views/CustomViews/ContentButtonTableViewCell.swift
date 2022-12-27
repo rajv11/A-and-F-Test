@@ -21,9 +21,9 @@ class ContentButtonTableViewCell: UITableViewCell {
         contentButton.setTitleColor(.lightGray, for: .highlighted)
     }
     
-    func configureCell(contentData: [AnyHashable: Any]) {
-        contentButton.setTitle(contentData["title"] as? String, for: .normal)
-        urlString = contentData["target"] as? String ?? ""
+    func configureCell(contentData: Content) {
+        contentButton.setTitle(contentData.title, for: .normal)
+        urlString = contentData.target ?? ""
         
     }
     
