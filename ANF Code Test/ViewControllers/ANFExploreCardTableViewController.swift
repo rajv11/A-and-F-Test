@@ -6,29 +6,30 @@
 import UIKit
 
 class ANFExploreCardTableViewController: UITableViewController {
-
-    private var exploreData: [[AnyHashable: Any]]? {
+    
+    private var promoCards: [PromoCard]? {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         if let filePath = Bundle.main.path(forResource: "exploreData", ofType: "json"),
-         let fileContent = try? Data(contentsOf: URL(fileURLWithPath: filePath)),
-         let jsonDictionary = try? JSONSerialization.jsonObject(with: fileContent, options: .mutableContainers) as? [[AnyHashable: Any]] {
-            return jsonDictionary
+           let fileContent = try? Data(contentsOf: URL(fileURLWithPath: filePath)), let returnData = try? decoder.decode([PromoCard].self, from: fileContent) {
+            return returnData
         }
         return nil
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        exploreData?.count ?? 0
+        promoCards?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "exploreContentCell", for: indexPath)
         if let titleLabel = cell.viewWithTag(1) as? UILabel,
-           let titleText = exploreData?[indexPath.row]["title"] as? String {
+           let titleText = promoCards?[indexPath.row].title as? String {
             titleLabel.text = titleText
         }
         
         if let imageView = cell.viewWithTag(2) as? UIImageView,
-           let name = exploreData?[indexPath.row]["backgroundImage"] as? String,
+           let name = promoCards?[indexPath.row].backgroundImage as? String,
            let image = UIImage(named: name) {
             imageView.image = image
         }
@@ -38,9 +39,9 @@ class ANFExploreCardTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detail" {
-            //Passing selected breed object to PromoCardViewController
+            //Passing selected PromoCard object to PromoCardViewController
             let detailVC = segue.destination as! PromoCardViewController
-            detailVC.data = exploreData?[self.tableView.indexPathForSelectedRow!.row]
+            detailVC.data = promoCards?[self.tableView.indexPathForSelectedRow!.row]
             
         }
     }
