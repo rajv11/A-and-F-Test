@@ -27,8 +27,12 @@ class ANFExploreCardTableViewController: UITableViewController {
         
         if let imageView = cell.viewWithTag(2) as? UIImageView,
            let url = promoCards?[indexPath.row].backgroundImage as? String {
-            imageView.downloaded(from: url) { data in
-                self.promoCards?[indexPath.row].imageData = data
+            if Constants.sericeType {
+                imageView.downloaded(from: url) { data in
+                    self.promoCards?[indexPath.row].imageData = data
+                }
+            } else {
+                imageView.image = UIImage(named: url)
             }
         }
         return cell
