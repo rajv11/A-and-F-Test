@@ -15,6 +15,7 @@
 		354A6236295B565200CD5E6C /* PromoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A6235295B565200CD5E6C /* PromoCardViewModel.swift */; };
 		354A6238295B56B600CD5E6C /* PromoCardStubServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A6237295B56B600CD5E6C /* PromoCardStubServiceManager.swift */; };
 		354A623A295B59DB00CD5E6C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A6239295B59DB00CD5E6C /* Utilities.swift */; };
+		354A623C295B734300CD5E6C /* PromoCardsServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A623B295B734300CD5E6C /* PromoCardsServiceManager.swift */; };
 		357C362A2958DF3800C9726D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C36292958DF3800C9726D /* WebKit.framework */; };
 		35956BC82955162A00CEFEE9 /* PromoCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */; };
 		3E4AB93A2676D86100C79456 /* exploreData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AB9392676D86100C79456 /* exploreData.json */; };
@@ -46,6 +47,7 @@
 		354A6235295B565200CD5E6C /* PromoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewModel.swift; sourceTree = "<group>"; };
 		354A6237295B56B600CD5E6C /* PromoCardStubServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardStubServiceManager.swift; sourceTree = "<group>"; };
 		354A6239295B59DB00CD5E6C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		354A623B295B734300CD5E6C /* PromoCardsServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardsServiceManager.swift; sourceTree = "<group>"; };
 		357C36292958DF3800C9726D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewController.swift; sourceTree = "<group>"; };
 		3E4AB9392676D86100C79456 /* exploreData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exploreData.json; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				354A6237295B56B600CD5E6C /* PromoCardStubServiceManager.swift */,
+				354A623B295B734300CD5E6C /* PromoCardsServiceManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
 				351CE8E629590080003F3246 /* ContentButtonTableViewCell.swift in Sources */,
 				354A6234295AC96C00CD5E6C /* PromoCardModel.swift in Sources */,
+				354A623C295B734300CD5E6C /* PromoCardsServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
