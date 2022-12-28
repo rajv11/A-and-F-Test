@@ -45,6 +45,9 @@ class ANFExploreCardTableViewController: UITableViewController {
         viewModel.getPromoCards { status in
             if status {
                 self.promoCards = self.viewModel.promoCards
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         } failure: { error in
             debugPrint(error.localizedDescription)
