@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PromoCardStubServiceManager: NSObject {
+class PromoCardStubServiceManager {
     class func getPromoCardStubServiceCall(completionHandler: @escaping (Result<[PromoCard], Error>) -> Void) {
         let jsonfileName = "exploreData"
         guard let data = Utilities.setUpJsonFile(jsonFileName: jsonfileName) else { return }

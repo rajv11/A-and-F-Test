@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PromoCardViewModel: NSObject {
+ final class PromoCardViewModel {
     var promoCards: [PromoCard]?
     
     func getPromoCardsFromStub() {
@@ -16,7 +16,20 @@ final class PromoCardViewModel: NSObject {
             case let .success(cards):
                 self.promoCards = cards
             case .failure(_):
-                debugPrint("Can nnot load data")
+                debugPrint("Can not load data")
+            }
+        }
+    }
+    
+    func getPromoCards(completion: @escaping (Bool) -> Void, failure: @escaping (Error) -> Void) {
+        PromoCardServiceManager.getPromoCardServiceCall { result in
+            switch result {
+            case let .success(cards):
+                self.promoCards = cards
+                completion(true)
+            case let .failure(error):
+                debugPrint(error.localizedDescription)
+                failure(error)
             }
         }
     }
