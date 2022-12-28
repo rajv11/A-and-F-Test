@@ -22,15 +22,20 @@ import Foundation
     }
     
     func getPromoCards(completion: @escaping (Bool) -> Void, failure: @escaping (Error) -> Void) {
-        PromoCardServiceManager.getPromoCardServiceCall { result in
-            switch result {
-            case let .success(cards):
-                self.promoCards = cards
-                completion(true)
-            case let .failure(error):
-                debugPrint(error.localizedDescription)
-                failure(error)
+        if Constants.sericeType {
+            PromoCardServiceManager.getPromoCardServiceCall { result in
+                switch result {
+                case let .success(cards):
+                    self.promoCards = cards
+                    completion(true)
+                case let .failure(error):
+                    debugPrint(error.localizedDescription)
+                    failure(error)
+                }
             }
+        } else {
+            getPromoCardsFromStub()
+            completion(true)
         }
     }
 }
