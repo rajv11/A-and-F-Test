@@ -12,6 +12,7 @@ struct PromoCard: Codable {
     let title, backgroundImage: String?
     let content: [Content]?
     let promoMessage, topDescription, bottomDescription: String?
+    var imageData: Data?
 }
 
 // MARK: - Content

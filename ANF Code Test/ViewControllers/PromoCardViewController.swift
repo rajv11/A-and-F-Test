@@ -20,9 +20,10 @@ class PromoCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        setupUI()
         loadViewData()
     }
+    
     
     func loadViewData() {
         guard let promoCard = data else { return }
@@ -34,21 +35,22 @@ class PromoCardViewController: UIViewController {
         contentButtonsTableView.dataSourceArray = contentData
     }
     
-    func setUI() {
-        guard let promoCard = data, let imageName = promoCard.backgroundImage, let image = UIImage(named: imageName) else { return }
-        var aspectRatio: CGFloat = 0.0
-        let isPotrait = image.size.width < image.size.height
-        aspectRatio = isPotrait ? image.size.height/image.size.width: image.size.width/image.size.height
-        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-        backgroundImageView.image = image
-        backgroundImageView.contentMode = .scaleAspectFit
-        
-        // Adding height constraint to backgroundImageView
-        let constraint = isPotrait ? backgroundImageView.widthAnchor.constraint(equalTo: backgroundImageView.heightAnchor, multiplier: 1/aspectRatio) : backgroundImageView.heightAnchor.constraint(equalTo: backgroundImageView.widthAnchor, multiplier: 1/aspectRatio)
-        NSLayoutConstraint.activate([constraint])
-        
-        promoMessage.textColor = .gray
-        bottomDescription.linkTextAttributes = [.foregroundColor: UIColor.gray]
+    func setupUI() {
+        guard let promoCard = data, let data = promoCard.imageData  else { return }
+            guard let image = UIImage(data: data) else { return }
+            var aspectRatio: CGFloat = 0.0
+            let isPotrait = image.size.width < image.size.height
+            aspectRatio = isPotrait ? image.size.height/image.size.width: image.size.width/image.size.height
+            self.backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+            self.backgroundImageView.image = image
+            self.backgroundImageView.contentMode = .scaleAspectFit
+            
+            // Adding height constraint to backgroundImageView
+            let constraint = isPotrait ? self.backgroundImageView.widthAnchor.constraint(equalTo: self.backgroundImageView.heightAnchor, multiplier: 1/aspectRatio) : self.backgroundImageView.heightAnchor.constraint(equalTo: self.backgroundImageView.widthAnchor, multiplier: 1/aspectRatio)
+            NSLayoutConstraint.activate([constraint])
+            
+            self.promoMessage.textColor = .gray
+            self.bottomDescription.linkTextAttributes = [.foregroundColor: UIColor.gray]
     }
     
     override func viewWillLayoutSubviews() {
