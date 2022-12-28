@@ -18,3 +18,7 @@ class Utilities {
         return nil
     }
 }
+
+class Constants {
+    public static var sericeType: Bool = Bundle.main.object(forInfoDictionaryKey: "ServiceType") as! Bool
+}
