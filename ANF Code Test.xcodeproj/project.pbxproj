@@ -16,6 +16,7 @@
 		354A6238295B56B600CD5E6C /* PromoCardStubServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A6237295B56B600CD5E6C /* PromoCardStubServiceManager.swift */; };
 		354A623A295B59DB00CD5E6C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A6239295B59DB00CD5E6C /* Utilities.swift */; };
 		354A623C295B734300CD5E6C /* PromoCardsServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A623B295B734300CD5E6C /* PromoCardsServiceManager.swift */; };
+		356DAD20295CFD9800939EBE /* ContentButtonTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD1F295CFD9800939EBE /* ContentButtonTableViewCellTests.swift */; };
 		357C362A2958DF3800C9726D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C36292958DF3800C9726D /* WebKit.framework */; };
 		35956BC82955162A00CEFEE9 /* PromoCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */; };
 		35E1FB65295CB7C100E8BEDD /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1FB64295CB7C100E8BEDD /* UIImage+Extension.swift */; };
@@ -49,6 +50,7 @@
 		354A6237295B56B600CD5E6C /* PromoCardStubServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardStubServiceManager.swift; sourceTree = "<group>"; };
 		354A6239295B59DB00CD5E6C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		354A623B295B734300CD5E6C /* PromoCardsServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardsServiceManager.swift; sourceTree = "<group>"; };
+		356DAD1F295CFD9800939EBE /* ContentButtonTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButtonTableViewCellTests.swift; sourceTree = "<group>"; };
 		357C36292958DF3800C9726D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewController.swift; sourceTree = "<group>"; };
 		35E1FB64295CB7C100E8BEDD /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			children = (
 				3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */,
 				3E727EEB2672708B006C11AC /* Info.plist */,
+				356DAD1F295CFD9800939EBE /* ContentButtonTableViewCellTests.swift */,
 			);
 			path = "ANF Code TestTests";
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */,
+				356DAD20295CFD9800939EBE /* ContentButtonTableViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
