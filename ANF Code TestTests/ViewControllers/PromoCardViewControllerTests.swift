@@ -9,9 +9,9 @@ import XCTest
 @testable import ANF_Code_Test
 
 class PromoCardViewControllerTests: XCTestCase {
-    
     var testInstance: PromoCardViewController!
     let viewModel = PromoCardViewModel()
+    
     override func setUp() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         testInstance = storyboard.instantiateViewController(withIdentifier: "PromoCardViewController") as? PromoCardViewController

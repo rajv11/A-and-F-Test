@@ -19,6 +19,9 @@
 		356DAD20295CFD9800939EBE /* ContentButtonTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD1F295CFD9800939EBE /* ContentButtonTableViewCellTests.swift */; };
 		356DAD22295D084A00939EBE /* ContentButtonsTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD21295D084A00939EBE /* ContentButtonsTableViewTests.swift */; };
 		356DAD26295D171B00939EBE /* PromoCardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD25295D171B00939EBE /* PromoCardViewControllerTests.swift */; };
+		356DAD28295D349300939EBE /* PromoCardsServiceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD27295D349300939EBE /* PromoCardsServiceManagerTests.swift */; };
+		356DAD2A295D3EBA00939EBE /* PromoCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD29295D3EBA00939EBE /* PromoCardViewModelTests.swift */; };
+		356DAD30295D447800939EBE /* APIServiceMockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD2F295D447800939EBE /* APIServiceMockHelper.swift */; };
 		357C362A2958DF3800C9726D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C36292958DF3800C9726D /* WebKit.framework */; };
 		35956BC82955162A00CEFEE9 /* PromoCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */; };
 		35E1FB65295CB7C100E8BEDD /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1FB64295CB7C100E8BEDD /* UIImage+Extension.swift */; };
@@ -55,6 +58,9 @@
 		356DAD1F295CFD9800939EBE /* ContentButtonTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButtonTableViewCellTests.swift; sourceTree = "<group>"; };
 		356DAD21295D084A00939EBE /* ContentButtonsTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButtonsTableViewTests.swift; sourceTree = "<group>"; };
 		356DAD25295D171B00939EBE /* PromoCardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewControllerTests.swift; sourceTree = "<group>"; };
+		356DAD27295D349300939EBE /* PromoCardsServiceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardsServiceManagerTests.swift; sourceTree = "<group>"; };
+		356DAD29295D3EBA00939EBE /* PromoCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewModelTests.swift; sourceTree = "<group>"; };
+		356DAD2F295D447800939EBE /* APIServiceMockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMockHelper.swift; sourceTree = "<group>"; };
 		357C36292958DF3800C9726D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewController.swift; sourceTree = "<group>"; };
 		35E1FB64295CB7C100E8BEDD /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -188,6 +194,48 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		356DAD2B295D440D00939EBE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */,
+				356DAD25295D171B00939EBE /* PromoCardViewControllerTests.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		356DAD2C295D442000939EBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				356DAD1F295CFD9800939EBE /* ContentButtonTableViewCellTests.swift */,
+				356DAD21295D084A00939EBE /* ContentButtonsTableViewTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		356DAD2D295D442A00939EBE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				356DAD27295D349300939EBE /* PromoCardsServiceManagerTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		356DAD2E295D443400939EBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				356DAD29295D3EBA00939EBE /* PromoCardViewModelTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		356DAD31295D44BA00939EBE /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				356DAD2F295D447800939EBE /* APIServiceMockHelper.swift */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
 		357C36282958DF3800C9726D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,11 +283,12 @@
 		3E727EE82672708B006C11AC /* ANF Code TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */,
+				356DAD2B295D440D00939EBE /* ViewControllers */,
 				3E727EEB2672708B006C11AC /* Info.plist */,
-				356DAD1F295CFD9800939EBE /* ContentButtonTableViewCellTests.swift */,
-				356DAD21295D084A00939EBE /* ContentButtonsTableViewTests.swift */,
-				356DAD25295D171B00939EBE /* PromoCardViewControllerTests.swift */,
+				356DAD2C295D442000939EBE /* Views */,
+				356DAD2D295D442A00939EBE /* Services */,
+				356DAD2E295D443400939EBE /* Models */,
+				356DAD31295D44BA00939EBE /* TestHelpers */,
 			);
 			path = "ANF Code TestTests";
 			sourceTree = "<group>";
@@ -366,9 +415,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356DAD28295D349300939EBE /* PromoCardsServiceManagerTests.swift in Sources */,
 				356DAD22295D084A00939EBE /* ContentButtonsTableViewTests.swift in Sources */,
 				3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */,
+				356DAD30295D447800939EBE /* APIServiceMockHelper.swift in Sources */,
 				356DAD26295D171B00939EBE /* PromoCardViewControllerTests.swift in Sources */,
+				356DAD2A295D3EBA00939EBE /* PromoCardViewModelTests.swift in Sources */,
 				356DAD20295CFD9800939EBE /* ContentButtonTableViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

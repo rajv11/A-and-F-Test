@@ -8,13 +8,12 @@ import XCTest
 @testable import ANF_Code_Test
 
 class ANFExploreCardTableViewControllerTests: XCTestCase {
-
     var testInstance: ANFExploreCardTableViewController!
     
     override func setUp() {
         testInstance = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? ANFExploreCardTableViewController
     }
-
+    
     func test_numberOfSections_ShouldBeOne() {
         let numberOfSections = testInstance.numberOfSections(in: testInstance.tableView)
         XCTAssert(numberOfSections == 1, "table view should have 1 section")

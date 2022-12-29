@@ -5,12 +5,10 @@
 //  Created by raj on 12/28/22.
 //
 
-import Foundation
 import XCTest
 @testable import ANF_Code_Test
 
 class ContentButtonsTableViewTests: XCTestCase {
-
     var tableView: ContentButtonsTableView!
     var dataSourceArray = [Content]()
     

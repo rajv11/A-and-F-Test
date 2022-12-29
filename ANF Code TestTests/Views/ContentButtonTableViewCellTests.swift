@@ -9,7 +9,6 @@ import XCTest
 @testable import ANF_Code_Test
 
 class ContentButtonTableViewCellTests: XCTestCase {
-
     var cell: ContentButtonTableViewCell!
     
     override func setUp() {
@@ -20,7 +19,6 @@ class ContentButtonTableViewCellTests: XCTestCase {
             return XCTFail("")
         }
         cell = customCell
-        
     }
     
     func test_UrlString_Should_Match() {
@@ -57,5 +55,4 @@ class ContentButtonTableViewCellTests: XCTestCase {
         XCTAssertNotNil(cell.configureCell(contentData: model))
         XCTAssertNotNil(cell.contentButtonClicked(UIButton()))
     }
-
 }
