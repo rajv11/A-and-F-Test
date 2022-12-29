@@ -22,6 +22,7 @@ class ContentButtonTableViewCellTests: XCTestCase {
         cell = customCell
         
     }
+    
     func test_UrlString_Should_Match() {
         let model = Content(target: "https://www.google.com", title: "Click here", elementType: "hyperlink")
         XCTAssertNotNil(cell.configureCell(contentData: model))
