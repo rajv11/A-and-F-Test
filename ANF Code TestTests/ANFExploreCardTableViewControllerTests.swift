@@ -36,4 +36,8 @@ class ANFExploreCardTableViewControllerTests: XCTestCase {
         let imageView = firstCell.viewWithTag(2) as? UIImageView
         XCTAssert(imageView?.image != nil, "image view image should not be nil")
     }
+    
+    func test_didSelectRowAt_ImageViewImage_shouldNotBeNil() {
+        XCTAssertNotNil(testInstance.tableView(testInstance.tableView, didSelectRowAt: IndexPath(row: 0, section: 0)))
+    }
 }

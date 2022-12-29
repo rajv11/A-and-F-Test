@@ -22,22 +22,39 @@ class ContentButtonTableViewCellTests: XCTestCase {
         cell = customCell
         
     }
+    func test_UrlString_Should_Match() {
+        let model = Content(target: "https://www.google.com", title: "Click here", elementType: "hyperlink")
+        XCTAssertNotNil(cell.configureCell(contentData: model))
+        let actualResult = cell.urlString
+        let expectedResult = model.target
+        XCTAssert(actualResult == expectedResult, "Loaded urls do not match")
+    }
     
-    func testContentButtonClickedForValidUrl() {
+    func test_Url_ShouldBeEmpty() {
+        let model = Content(target: nil, title: "", elementType: "")
+        XCTAssertNotNil(cell.configureCell(contentData: model))
+        let actualResult = cell.urlString
+        XCTAssert(actualResult.isEmpty, "Url should be empty")
+    }
+    
+    func test_ButtonText_should_Match() {
+        let model = Content(target: "https://www.google.com", title: "Click here", elementType: "hyperlink")
+        XCTAssertNotNil(cell.configureCell(contentData: model))
+        let actualResult = cell.contentButton.currentTitle
+        let expectedResult = model.title
+        XCTAssert(actualResult == expectedResult, "Text doesnt match")
+    }
+    
+    func test_ContentButtonClicked_For_ValidUrl() {
         let model = Content(target: "https://www.google.com", title: "Click here", elementType: "hyperlink")
         XCTAssertNotNil(cell.configureCell(contentData: model))
         XCTAssertNotNil(cell.contentButtonClicked(UIButton()))
     }
     
-    func testConfigureContentButtonClickedForInValidUrl() {
+    func test_ContentButtonClicked_For_InValidUrl() {
         let model = Content(target: nil, title: nil, elementType: nil)
         XCTAssertNotNil(cell.configureCell(contentData: model))
         XCTAssertNotNil(cell.contentButtonClicked(UIButton()))
     }
-    
-    func testConfigureCellForInvalidData() {
-        let model = Content(target: "", title: "", elementType: "")
-        XCTAssertNotNil(cell.configureCell(contentData: model))
-    }
-    
+
 }
