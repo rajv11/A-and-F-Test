@@ -16,7 +16,7 @@ class ContentButtonsTableViewTests: XCTestCase {
         super.setUp()
         tableView = ContentButtonsTableView(frame: CGRect.zero, style: .plain)
         tableView.awakeFromNib()
-        let model = Content(target: "https://www.google.com", title: "Click here", elementType: "hyperlink")
+        let model = Content(target: "https://www.abercrombie.com/", title: "Click here", elementType: "hyperlink")
         tableView.dataSourceArray = [model, model]
     }
     

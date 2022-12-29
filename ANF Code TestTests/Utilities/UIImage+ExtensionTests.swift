@@ -14,7 +14,7 @@ final class UIImage_ExtensionTests: XCTestCase {
         URLProtocol.registerClass(MockingURLProtocol.self)
 
         let imageView = UIImageView()
-        imageView.downloaded(from: "https://google.com") { _ in }
+        imageView.downloaded(from: "https://www.abercrombie.com") { _ in }
         XCTAssertNil(imageView.image)
     }
 }

@@ -22,7 +22,7 @@ class ContentButtonTableViewCellTests: XCTestCase {
     }
     
     func test_UrlString_Should_Match() {
-        let model = Content(target: "https://www.google.com", title: "Click here", elementType: "hyperlink")
+        let model = Content(target: "https://www.abercrombie.com", title: "Click here", elementType: "hyperlink")
         XCTAssertNotNil(cell.configureCell(contentData: model))
         let actualResult = cell.urlString
         let expectedResult = model.target
@@ -37,7 +37,7 @@ class ContentButtonTableViewCellTests: XCTestCase {
     }
     
     func test_ButtonText_should_Match() {
-        let model = Content(target: "https://www.google.com", title: "Click here", elementType: "hyperlink")
+        let model = Content(target: "https://www.abercrombie.com", title: "Click here", elementType: "hyperlink")
         XCTAssertNotNil(cell.configureCell(contentData: model))
         let actualResult = cell.contentButton.currentTitle
         let expectedResult = model.title
@@ -45,7 +45,7 @@ class ContentButtonTableViewCellTests: XCTestCase {
     }
     
     func test_ContentButtonClicked_For_ValidUrl() {
-        let model = Content(target: "https://www.google.com", title: "Click here", elementType: "hyperlink")
+        let model = Content(target: "https://www.abercrombie.com", title: "Click here", elementType: "hyperlink")
         XCTAssertNotNil(cell.configureCell(contentData: model))
         XCTAssertNotNil(cell.contentButtonClicked(UIButton()))
     }
