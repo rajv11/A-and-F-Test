@@ -35,7 +35,11 @@ class PromoCardViewController: UIViewController {
         topDescription.text = promoCard.topDescription
         promoTitle.text = promoCard.title
         promoMessage.text = promoCard.promoMessage
-        bottomDescription.attributedText = promoCard.bottomDescription?.htmlToAttributedString
+        let htmlAttributedString = promoCard.bottomDescription?.htmlToAttributedString
+        let attr = [NSMutableAttributedString.Key.foregroundColor: UIColor.gray]
+        let range = NSRange(location: 0, length: htmlAttributedString?.string.count ?? 0)
+        htmlAttributedString?.addAttributes(attr, range: range)
+        bottomDescription.attributedText = htmlAttributedString
         guard let contentData = promoCard.content else { return }
         contentButtonsTableView.dataSourceArray = contentData
     }
