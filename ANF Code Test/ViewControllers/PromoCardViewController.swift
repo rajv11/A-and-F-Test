@@ -21,7 +21,7 @@ class PromoCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        loadViewData()
+        loadUIWithViewData()
     }
     
     override func viewWillLayoutSubviews() {
@@ -30,7 +30,7 @@ class PromoCardViewController: UIViewController {
         self.contentButtonsTableViewHeightConstraint.constant = self.contentButtonsTableView.contentSize.height
     }
     
-    func loadViewData() {
+    func loadUIWithViewData() {
         guard let promoCard = data else { return }
         topDescription.text = promoCard.topDescription
         promoTitle.text = promoCard.title
@@ -42,6 +42,20 @@ class PromoCardViewController: UIViewController {
         bottomDescription.attributedText = htmlAttributedString
         guard let contentData = promoCard.content else { return }
         contentButtonsTableView.dataSourceArray = contentData
+        
+        if promoCard.topDescription == nil {
+            topDescription.removeFromSuperview()
+            promoTitle.topAnchor.constraint(equalTo: self.backgroundImageView.bottomAnchor, constant: 10.0).isActive = true
+        }
+        
+        if promoCard.promoMessage == nil {
+            promoMessage.removeFromSuperview()
+            bottomDescription.topAnchor.constraint(equalTo: self.promoTitle.bottomAnchor, constant: 10.0).isActive = true
+            if promoCard.bottomDescription == nil {
+                bottomDescription.removeFromSuperview()
+                contentButtonsTableView.topAnchor.constraint(equalTo: self.promoTitle.bottomAnchor, constant: 10.0).isActive = true
+            }
+        }
     }
 
     func setupUI() {
