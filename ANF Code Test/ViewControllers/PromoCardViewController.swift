@@ -45,7 +45,7 @@ class PromoCardViewController: UIViewController {
         
         if promoCard.topDescription == nil {
             topDescription.removeFromSuperview()
-            promoTitle.topAnchor.constraint(equalTo: self.backgroundImageView.bottomAnchor, constant: 10.0).isActive = true
+            promoTitle.topAnchor.constraint(equalTo: self.backgroundImageView.bottomAnchor, constant: 20.0).isActive = true
         }
         
         if promoCard.promoMessage == nil {
@@ -72,6 +72,8 @@ class PromoCardViewController: UIViewController {
         let constraint = isPotrait ? self.backgroundImageView.widthAnchor.constraint(equalTo: self.backgroundImageView.heightAnchor, multiplier: 1/aspectRatio) : self.backgroundImageView.heightAnchor.constraint(equalTo: self.backgroundImageView.widthAnchor, multiplier: 1/aspectRatio)
         NSLayoutConstraint.activate([constraint])
         
+        self.topDescription.textColor = .black
+        self.promoTitle.textColor = .black
         self.promoMessage.textColor = .gray
         self.bottomDescription.linkTextAttributes = [.foregroundColor: UIColor.gray]
     }
