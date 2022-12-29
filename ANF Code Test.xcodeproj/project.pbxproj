@@ -22,6 +22,8 @@
 		356DAD28295D349300939EBE /* PromoCardsServiceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD27295D349300939EBE /* PromoCardsServiceManagerTests.swift */; };
 		356DAD2A295D3EBA00939EBE /* PromoCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD29295D3EBA00939EBE /* PromoCardViewModelTests.swift */; };
 		356DAD30295D447800939EBE /* APIServiceMockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD2F295D447800939EBE /* APIServiceMockHelper.swift */; };
+		356DAD33295D4BB600939EBE /* UIImage+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD32295D4BB600939EBE /* UIImage+ExtensionTests.swift */; };
+		356DAD36295D50C200939EBE /* String+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DAD35295D50C200939EBE /* String+ExtensionTests.swift */; };
 		357C362A2958DF3800C9726D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C36292958DF3800C9726D /* WebKit.framework */; };
 		35956BC82955162A00CEFEE9 /* PromoCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */; };
 		35E1FB65295CB7C100E8BEDD /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1FB64295CB7C100E8BEDD /* UIImage+Extension.swift */; };
@@ -61,6 +63,8 @@
 		356DAD27295D349300939EBE /* PromoCardsServiceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardsServiceManagerTests.swift; sourceTree = "<group>"; };
 		356DAD29295D3EBA00939EBE /* PromoCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewModelTests.swift; sourceTree = "<group>"; };
 		356DAD2F295D447800939EBE /* APIServiceMockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMockHelper.swift; sourceTree = "<group>"; };
+		356DAD32295D4BB600939EBE /* UIImage+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ExtensionTests.swift"; sourceTree = "<group>"; };
+		356DAD35295D50C200939EBE /* String+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionTests.swift"; sourceTree = "<group>"; };
 		357C36292958DF3800C9726D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		35956BC72955162A00CEFEE9 /* PromoCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardViewController.swift; sourceTree = "<group>"; };
 		35E1FB64295CB7C100E8BEDD /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 			path = TestHelpers;
 			sourceTree = "<group>";
 		};
+		356DAD34295D508E00939EBE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				356DAD32295D4BB600939EBE /* UIImage+ExtensionTests.swift */,
+				356DAD35295D50C200939EBE /* String+ExtensionTests.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		357C36282958DF3800C9726D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +302,7 @@
 				356DAD2D295D442A00939EBE /* Services */,
 				356DAD2E295D443400939EBE /* Models */,
 				356DAD31295D44BA00939EBE /* TestHelpers */,
+				356DAD34295D508E00939EBE /* Utilities */,
 			);
 			path = "ANF Code TestTests";
 			sourceTree = "<group>";
@@ -417,7 +431,9 @@
 			files = (
 				356DAD28295D349300939EBE /* PromoCardsServiceManagerTests.swift in Sources */,
 				356DAD22295D084A00939EBE /* ContentButtonsTableViewTests.swift in Sources */,
+				356DAD36295D50C200939EBE /* String+ExtensionTests.swift in Sources */,
 				3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */,
+				356DAD33295D4BB600939EBE /* UIImage+ExtensionTests.swift in Sources */,
 				356DAD30295D447800939EBE /* APIServiceMockHelper.swift in Sources */,
 				356DAD26295D171B00939EBE /* PromoCardViewControllerTests.swift in Sources */,
 				356DAD2A295D3EBA00939EBE /* PromoCardViewModelTests.swift in Sources */,
